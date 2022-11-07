@@ -4,5 +4,5 @@ RUN pip install pandas
 
 EXPOSE 80
 
-COPY ./app /myapp
+COPY ./app /app
 
