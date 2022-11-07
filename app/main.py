@@ -4,7 +4,7 @@ import pandas as pd
 app = FastAPI()
 
 # Cargamos el archivo csv, ingestándolo en dataframe, usando pandas
-df = pd.read_csv('csv\\netflix.csv')
+df = pd.read_csv('./csv/netflix.csv')
 
 # Cambiamos el tipo de dato de la columna 'date_added' a datetime
 df['date_added'] = df['date_added'].apply(pd.to_datetime)
@@ -28,19 +28,19 @@ dicc_21 = df_21.reset_index().to_dict(orient='index')
 
 @app.get('/')
 async def index():
-    return {'Para acceder a los catálogos seleccione el año: /2019  |  /2020  |  /2021'}
+    return {'Viendo que': 'Onda'}
 
 
 @app.get('/2019')
 async def cat_19():
-    return dicc_19
+    return {'2019': dicc_19}
 
 
 @app.get('/2020')
 async def cat_20():
-    return dicc_20
+    return {'2020': dicc_20}
 
 
 @app.get('/2021')
 async def cat_21():
-    return dicc_21
+    return {'2021': dicc_21}
