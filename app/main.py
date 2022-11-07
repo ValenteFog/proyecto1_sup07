@@ -33,14 +33,14 @@ async def index():
 
 @app.get('/2019')
 async def cat_19():
-    return {'2019': dicc_19}
+    return dicc_19
 
 
 @app.get('/2020')
 async def cat_20():
-    return {'2020': dicc_20}
+    return dicc_20
 
 
 @app.get('/2021')
 async def cat_21():
-    return {'2021': dicc_21}
+    return dicc_21
