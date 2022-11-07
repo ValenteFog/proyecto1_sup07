@@ -28,7 +28,7 @@ dicc_21 = df_21.reset_index().to_dict(orient='index')
 
 @app.get('/')
 async def index():
-    return {'Viendo que': 'Onda'}
+    return {'Para consultar los catálogos, ingrese al año: /2019  |  /2020  |  /2021'}
 
 
 @app.get('/2019')
